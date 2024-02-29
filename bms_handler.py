@@ -7,7 +7,7 @@ import can
 # It implements the converter for the BMS but with a singleton pattern so you can only instance one BMSHandler.
 class BMSHandler(AbstractCanHandler):
     __id: int = 2
-    __bms_id: int = 100
+    __bms_id: int = 256
 
     def __new__(cls):
         if not hasattr(cls, "_instance"):
