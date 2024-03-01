@@ -40,7 +40,7 @@ object BMSHandler {
   # can.Bus internal_bus = <<can1>>,<<<bms_id>:<0x7F0>>>
   # can.Bus external_bus = <<can_bridge>>
   # int id = 2
-  # int bms_id = 100
+  # int bms_id = 256
   # can.Message change_id(message: can.Message, params=null)
   # can.message.Message get_message(query: int)
   # void send_message(base_message: can.message.Message)

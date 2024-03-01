@@ -1,0 +1,20 @@
+@startuml
+Participant Kelly as kelly
+Participant BMS as bms
+Entity can0 as c0
+Entity can1 as c1
+Participant CanHandler as ch
+Entity can_bridge as cb
+Participant Telemetry as tl
+
+ch --> c0: sends a query to the kelly
+c0 --> kelly: receive the query
+kelly --> c0: sends a response message
+c0 --> ch: receive the respose
+ch --> cb: sends a message processed
+cb --> tl: receive the processed message
+bms --> c1: sends a message
+c1 --> ch: receive the message
+ch --> cb: sends a message processed
+cb --> tl: receive the processed message
+@enduml
